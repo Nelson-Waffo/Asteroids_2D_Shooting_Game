@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file>assets/bullet.png</file>
+        <file>assets/player.png</file>
+        <file>assets/sky.png</file>
+        <file>assets/asteroid.png</file>
+        <file>assets/asteroid2.png</file>
+        <file>assets/asteroid3.png</file>
+        <file>assets/asteroid4.png</file>
+        <file>assets/asteroid5.png</file>
+        <file>assets/asteroid6.png</file>
+        <file>assets/bullet2.png</file>
+        <file>assets/bullet3.png</file>
+        <file>assets/nightsky.png</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>sounds/background.mp3</file>
+        <file>sounds/explosion.mp3</file>
+        <file>sounds/gunshot1.mp3</file>
+        <file>sounds/gunshot2.mp3</file>
+        <file>sounds/background2.mp3</file>
+    </qresource>
+</RCC>
