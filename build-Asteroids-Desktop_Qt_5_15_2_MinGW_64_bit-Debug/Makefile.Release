@@ -1433,20 +1433,20 @@ release/moc_asteroidsgame.cpp: ../Asteroids/asteroidsgame.h \
 		../Asteroids/mainwidget.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QDebug \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QWidget \
-		../Asteroids/PlayerController.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
+		../Asteroids/PlayerRenderer.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Player.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QString \
 		../Asteroids/Actor.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
 		../Asteroids/Bullet.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QTimer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qtimer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
 		../Asteroids/Timer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsTextItem \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Score.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/QMediaPlayer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/qmediaplayer.h \
@@ -1472,8 +1472,7 @@ release/moc_asteroidsgame.cpp: ../Asteroids/asteroidsgame.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpen.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qrandom.h \
-		../Asteroids/PlayerRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
 		../Asteroids/BulletRenderer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsview.h \
@@ -1596,20 +1595,20 @@ release/moc_mainwidget.cpp: ../Asteroids/mainwidget.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
-		../Asteroids/PlayerController.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
+		../Asteroids/PlayerRenderer.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Player.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QString \
 		../Asteroids/Actor.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
 		../Asteroids/Bullet.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QTimer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qtimer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
 		../Asteroids/Timer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsTextItem \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Score.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/QMediaPlayer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/qmediaplayer.h \
@@ -1635,8 +1634,7 @@ release/moc_mainwidget.cpp: ../Asteroids/mainwidget.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpen.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qrandom.h \
-		../Asteroids/PlayerRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
 		../Asteroids/BulletRenderer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsview.h \
@@ -1768,20 +1766,20 @@ ui_asteroidsgame.h: ../Asteroids/asteroidsgame.ui \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
-		../Asteroids/PlayerController.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
+		../Asteroids/PlayerRenderer.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Player.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QString \
 		../Asteroids/Actor.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
 		../Asteroids/Bullet.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QTimer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qtimer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
 		../Asteroids/Timer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsTextItem \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Score.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/QMediaPlayer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/qmediaplayer.h \
@@ -1807,8 +1805,7 @@ ui_asteroidsgame.h: ../Asteroids/asteroidsgame.ui \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpen.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qrandom.h \
-		../Asteroids/PlayerRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
 		../Asteroids/BulletRenderer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsview.h \
@@ -3318,20 +3315,20 @@ release/asteroidsgame.o: ../Asteroids/asteroidsgame.cpp ../Asteroids/asteroidsga
 		../Asteroids/mainwidget.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QDebug \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QWidget \
-		../Asteroids/PlayerController.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
+		../Asteroids/PlayerRenderer.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Player.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QString \
 		../Asteroids/Actor.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
 		../Asteroids/Bullet.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QTimer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qtimer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
 		../Asteroids/Timer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsTextItem \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Score.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/QMediaPlayer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/qmediaplayer.h \
@@ -3357,8 +3354,7 @@ release/asteroidsgame.o: ../Asteroids/asteroidsgame.cpp ../Asteroids/asteroidsga
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpen.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qrandom.h \
-		../Asteroids/PlayerRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
 		../Asteroids/BulletRenderer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsview.h \
@@ -3510,20 +3506,20 @@ release/main.o: ../Asteroids/main.cpp ../Asteroids/mainwindow.h \
 		../Asteroids/mainwidget.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QDebug \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QWidget \
-		../Asteroids/PlayerController.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
+		../Asteroids/PlayerRenderer.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Player.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QString \
 		../Asteroids/Actor.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
 		../Asteroids/Bullet.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QTimer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qtimer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
 		../Asteroids/Timer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsTextItem \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Score.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/QMediaPlayer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/qmediaplayer.h \
@@ -3549,8 +3545,7 @@ release/main.o: ../Asteroids/main.cpp ../Asteroids/mainwindow.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpen.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qrandom.h \
-		../Asteroids/PlayerRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
 		../Asteroids/BulletRenderer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsview.h \
@@ -3672,20 +3667,20 @@ release/mainwidget.o: ../Asteroids/mainwidget.cpp ../Asteroids/mainwidget.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
-		../Asteroids/PlayerController.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
+		../Asteroids/PlayerRenderer.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Player.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QString \
 		../Asteroids/Actor.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QObject \
 		../Asteroids/Bullet.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QTimer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qtimer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
 		../Asteroids/Timer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsTextItem \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
 		../Asteroids/Score.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/QMediaPlayer \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtMultimedia/qmediaplayer.h \
@@ -3711,8 +3706,7 @@ release/mainwidget.o: ../Asteroids/mainwidget.cpp ../Asteroids/mainwidget.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qpen.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/qrandom.h \
-		../Asteroids/PlayerRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsPixmapItem \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/QKeyEvent \
 		../Asteroids/BulletRenderer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtWidgets/qgraphicsview.h \
