@@ -7,13 +7,18 @@ int Timer::timing = 180; // 3 minutes
 
 // constructor to display the text
 Timer::Timer(QGraphicsItem* parent): QGraphicsTextItem(parent){
+    // initiliase the time
+    timing = 180;
     // set the position
-    this->setPos(Scene::getScene()->getWidth() - 110, 1);
+    this->setPos(Scene::getScene()->getWidth() - 122, 1);
     // set the timer text
     this->setPlainText(QString("Time: ") + QString::number(timing));
     // set the colour and font
-    this->setDefaultTextColor(Qt::red);
-    this->setFont(QFont("Tahoma", 14));
+    this->setDefaultTextColor(Qt::darkBlue);
+    this->setFont(QFont("Times New Roman", 14));
+    QFont f = this->font();
+    f.setBold(true);
+    this->setFont(f);
 
     // set up the update for the game timer
     timer = new QTimer();
@@ -32,13 +37,15 @@ void Timer::displayTime(){
     }
     else{
         // display final text
-        this->setDefaultTextColor(Qt::black);
-        this->setPos(Scene::getScene()->getWidth()/2 - 100, Scene::getScene()->getHeight()/2);
+
+        this->setPos(Scene::getScene()->getWidth()/2 - 150, Scene::getScene()->getHeight()/2);
         if(Score::getScore() >= winning_condition){
+            this->setDefaultTextColor(Qt::white);
             this->setPlainText( "You succeeded. Congratulations!!");
         }
         else{
-            this->setPlainText("Sorry. You failed. Sorry!");
+            this->setDefaultTextColor(Qt::black);
+            this->setPlainText("Sorry. You failed. Try again!");
         }
         // stop the timer. time is up
         timer->stop();

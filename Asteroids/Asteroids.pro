@@ -24,14 +24,15 @@ SOURCES += \
     Bullet.cpp \
     BulletRenderer.cpp \
     CollisionController.cpp \
-    Game.cpp \
     Life.cpp \
     Player.cpp \
     PlayerRenderer.cpp \
     Scene.cpp \
     Score.cpp \
     Timer.cpp \
-    main.cpp
+    asteroidsgame.cpp \
+    main.cpp \
+    mainwidget.cpp
 
 HEADERS += \
     Actor.h \
@@ -41,15 +42,18 @@ HEADERS += \
     Bullet.h \
     BulletRenderer.h \
     CollisionController.h \
-    Game.h \
     Life.h \
     Player.h \
     PlayerRenderer.h \
     Scene.h \
     Score.h \
-    Timer.h
+    Timer.h \
+    asteroidsgame.h \
+    mainwidget.h
 
-FORMS +=
+FORMS += \
+    asteroidsgame.ui \
+    mainwidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

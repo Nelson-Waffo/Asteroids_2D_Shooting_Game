@@ -1,10 +1,12 @@
-#ifndef PLAYER_H
+﻿#ifndef PLAYER_H
 #define PLAYER_H
 #include <QString>
 #include "Actor.h"
 #include "Bullet.h"
 #include <list>
 #include <QMediaPlayer>
+#include "Scene.h"
+#include <QRandomGenerator>
 
 // a class responsible for managing the only instance of the player
 class Player : public Actor{
@@ -24,9 +26,15 @@ public:
     // data interface
     static Player* getPlayer();
     static QString getPath(){return path;}
+    int& resetX();
     int getWidth(){return width;}
     Bullet* shoot();
-    static std::list<Bullet*> getBullets();
+    // a collection of shot bullets
+    static std::list<Bullet*>& getBullets();
+    // a function which determine the player image
+    void setPlayerImage();
+    // a function which determines the bullet sound at run time
+    void setBulletSound();
 
 };
 

@@ -14,6 +14,8 @@ public:
     // scene data interface
     int getHeight(){return height;}
     int getWidth(){return width;}
+    // a function to reset the scene
+    void resetScene();
 private:
     // private scene constructor
     Scene(int x, int y, int w, int h);

@@ -13,14 +13,19 @@ AsteroidFactory::AsteroidFactory(){
     timer = new QTimer();
     // creation of asteroids
     this->connect(timer, SIGNAL(timeout()), this, SLOT(create()));
+    this->connect(timer, SIGNAL(timeout()), this, SLOT(cleanAsteroidsInPlay()));
     timer->start(1200);
 }
 
 // a function to determine the image for the asteroid
 QString asteroid_image(){
-    int random = rand() % 1000; // between 0 and 99
+    // int random = rand() % 1000; // between 0 and 99
+    int random = QRandomGenerator::global()->bounded(1, 1000);
     QString path = "";
-    if(random % 9 == 0) {
+    if(random % 11 == 0) {
+        path = ":/assets/assets/asteroid3.png";
+    }
+    else if(random % 9 == 0) {
         path = ":/assets/assets/asteroid6.png";
     }
     else if(random % 7 == 0) {
@@ -42,11 +47,12 @@ QString asteroid_image(){
 void AsteroidFactory::create(){
     if(Timer::getTime() > 0){
         // generate a random number for the asteroid x coordinate
-        int x = (rand() % 100) * 8; // a random number 0 and 99
+        int x = (rand() % 100) + (rand() % 100) * 8; // a random number 0 and 99
         static Scene * scene = Scene::getScene();
         static int scene_width = scene->getWidth();
         // 50 represents the width of the asteroid
         if(x + 50 > scene_width){
+            // if yes, bring it back to the screen
             x =  scene_width - 50 - 5; // 5 for a small margin
         }
         // get the random image of the asteroid
@@ -140,12 +146,120 @@ void AsteroidFactory::scatterHelper(int scatterX, int scatterY, int astWidth, in
     Scene::getScene()->addItem(asteroidRenderer);
     // store for releasing memory later at the end
     tinyAst.push_back(asteroidRenderer);
+}
 
+// a function which returns the list of all large, rendered asteroids
+list<AsteroidRenderer *>& AsteroidFactory::getAsteroidRenderers()
+{
+    return ast;
+}
+
+// a function which returns the list of all small, rendered asteoids
+list<AsteroidRenderer *> &AsteroidFactory::getTinyAsteroidRenderers()
+{
+    return tinyAst;
+}
+
+// a function for removing asteroids renderers during the game
+void AsteroidFactory::cleanAsteroidsInPlay()
+{
+    // get the scene object
+    Scene * scene = Scene::getScene();
+    // remove tiny asteroids renderers no longer visible dynamically
+    for(list<AsteroidRenderer*>::iterator iter = tinyAst.begin();
+        iter != tinyAst.end(); ++iter){
+        if((*iter)->getY() >= Scene::getScene()->getHeight() + 10){
+            // remove from the scene
+            if(scene != nullptr) scene->removeItem(*iter);
+            // remove from the collection
+            tinyAst.remove(*iter);
+            // release memory
+            delete *iter;
+        }
+    }
+    // remove large asteroids renderers no longer visible dynamically
+    for(list<AsteroidRenderer*>::iterator iter = ast.begin();
+        iter != ast.end(); ++iter){
+        if((*iter)->getY() >= Scene::getScene()->getHeight() + 10){
+            // remove from the scene
+            if(scene != nullptr) scene->removeItem(*iter);
+            // remove from the collection
+            ast.remove(*iter);
+            // release memory
+            delete *iter;
+        }
+    }
+    // delete large asteroids dynamically
+    for(list<Asteroid*>::iterator iter = asteroids.begin();
+        iter != asteroids.end(); ++iter){
+        if((*iter)->getY() >= Scene::getScene()->getHeight() + 10){
+            // remove from the collection
+            asteroids.remove(*iter);
+            // release memory
+            delete *iter;
+        }
+    }
+    // delete tiny asteroids dynamically
+    for(list<Asteroid*>::iterator iter = tinyAsteroids.begin();
+        iter != tinyAsteroids.end(); ++iter){
+        if((*iter)->getY() >= Scene::getScene()->getHeight() + 10){
+            // remove from the collection
+            tinyAsteroids.remove(*iter);
+            // release memory
+            delete *iter;
+        }
+    }
+}
+
+// a function to clean up asteroids
+void AsteroidFactory::cleanupAsteroids()
+{
+    // get the scene object
+    Scene * scene = Scene::getScene();
+    // clean all big asteroids renderer. remove them from the scene
+    // remove all asteroid renderers
+    for(list<AsteroidRenderer*>::iterator iter = ast.begin();
+        iter != ast.end(); ++iter){
+        // remove from the scene
+        if(scene != nullptr) scene->removeItem(*iter);
+        // release memory
+        delete *iter;
+    }
+    for(list<AsteroidRenderer*>::iterator iter = tinyAst.begin();
+        iter != tinyAst.end(); ++iter){
+        // remove from the scene
+        if(scene != nullptr) scene->removeItem(*iter);
+        // release memory
+        delete *iter;
+    }
+    // clean up the collection
+    ast.clear();
+    tinyAst.clear();
+    // delete all asteroids
+    for(list<Asteroid*>::iterator iter = asteroids.begin();
+        iter != asteroids.end(); ++iter){
+        delete *iter;
+    }
+    // delete all tiny asteroids
+    for(list<Asteroid*>::iterator iter = tinyAsteroids.begin();
+        iter != tinyAsteroids.end(); ++iter){
+        delete *iter;
+    }
+    // clean up the collections
+    asteroids.clear();
+    tinyAsteroids.clear();
 }
 
 // a destructor to destroy asteroids and release resources
 AsteroidFactory::~AsteroidFactory(){
     delete timer;
+    // clean up everything asteroids
+    cleanupAsteroids();
+}
+
+
+
+/**
     // delete all asteroids
     for(list<Asteroid*>::iterator iter = asteroids.begin();
         iter != asteroids.end(); ++iter){
@@ -167,4 +281,4 @@ AsteroidFactory::~AsteroidFactory(){
         iter != tinyAst.end(); ++iter){
         delete *iter;
     }
-}
+*/

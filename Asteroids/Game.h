@@ -14,6 +14,7 @@
 #include "Score.h"
 #include "Timer.h"
 #include "Life.h"
+#include <QRandomGenerator>
 
 // the game class where all the rendering takes place
 class Game : public QGraphicsView{
@@ -24,6 +25,10 @@ public:
     // destructor
     ~Game();
 public slots:
+    // a function to start the game
+    void startGame();
+    // a function to restart the game
+    void restartGame();
     // a function to replay the music
     void replay();
 private:

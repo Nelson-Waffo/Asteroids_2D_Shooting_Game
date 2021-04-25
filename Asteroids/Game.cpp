@@ -40,8 +40,8 @@ Game::Game(){
 
     // play the background music
     QString path = "qrc:/sounds/sounds/background.mp3";
-    srand(time(NULL));
-    int number = rand() % 100; // between 1 and 100
+
+    int number = QRandomGenerator::global()->bounded(1, 100); // between 1 and 100
     if(number % 5 == 0 || number % 3 == 0) path = "qrc:/sounds/sounds/background2.mp3";
     mediaPlayer.setMedia(QUrl(path));
     mediaPlayer.play();
@@ -77,4 +77,16 @@ Game::~Game(){
    delete timed;
    delete score;
     delete life;
+}
+
+// a function used to start the game
+void Game::startGame()
+{
+
+}
+
+// a function used to restart the game
+void Game::restartGame()
+{
+
 }

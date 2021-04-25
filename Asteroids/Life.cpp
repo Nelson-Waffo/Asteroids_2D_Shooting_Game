@@ -7,13 +7,18 @@ int Life::life = 50;
 
 // implement the constructor
 Life::Life(QGraphicsItem* parent) : QGraphicsTextItem(parent){
+    // intialise life
+    life = 50;
     // set the position
     this->setPos(0, 50);
     // set the text
     this->setPlainText("Life: " + QString::number(life));
     // set colour
-    this->setDefaultTextColor(Qt::black);
-    this->setFont(QFont("Tahoma", 14));
+    this->setDefaultTextColor(Qt::darkRed);
+    this->setFont(QFont("Times New Roman", 14));
+    QFont f = this->font();
+    f.setBold(true);
+    this->setFont(f);
 
     // periodic update of the life of a player
     timer = new QTimer();

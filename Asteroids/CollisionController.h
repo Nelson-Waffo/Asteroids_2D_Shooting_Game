@@ -9,6 +9,15 @@
 #include <QMediaPlayer>
 #include "BulletRenderer.h"
 #include "Scene.h"
+#include "Score.h"
+#include <QDebug>
+#include <QRandomGenerator>
+
+// explosion sounds
+struct Meta{
+    static const QString explosion1;
+    static const QString explosion2;
+};
 
 // a class responsible for checking collisions between
 // bullets and asteroids

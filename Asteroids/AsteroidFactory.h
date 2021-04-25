@@ -9,6 +9,8 @@
 #include <QTimer>
 #include "Scene.h"
 #include "Timer.h"
+#include <QRandomGenerator>
+#include <QDebug>
 
 using namespace std;
 
@@ -27,14 +29,24 @@ public:
     // a function responsible for scattering residues of an asteroid in the world
     static void scatter(Asteroid*);
     static void scatterHelper(int, int, int, int, QString);
+    static list<AsteroidRenderer*>& getAsteroidRenderers();
+    static list<AsteroidRenderer*>& getTinyAsteroidRenderers();
+    // clean up all asteroids when the game is over
+    void cleanupAsteroids();
 public slots:
     void create();
+    // clean asteroid renderers for better performance during game
+    void cleanAsteroidsInPlay();
 private:
     // rendering collections: store rendered data for collision detection
+    // collection of large asteroids
     static list<Asteroid*> asteroids;
+    // tiny asteroids
     static list<Asteroid*> tinyAsteroids;
     QTimer * timer;
+    // collection of large, rendered asteroids
     static list<AsteroidRenderer*> ast;
+    // tiny rendered asteroids
     static list<AsteroidRenderer*> tinyAst;
 };
 

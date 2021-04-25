@@ -32,7 +32,7 @@ void Bullet::update(){
         return;
     }
     // the bullet moves up after being created.
-    if(this->coordY + this->height >= 0){
+    if(this->coordY + this->height >= -10){
         this->coordY -= 5;
     }
     else{

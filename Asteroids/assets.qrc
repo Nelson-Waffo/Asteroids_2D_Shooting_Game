@@ -12,6 +12,12 @@
         <file>assets/bullet2.png</file>
         <file>assets/bullet3.png</file>
         <file>assets/nightsky.png</file>
+        <file>assets/icons/about.png</file>
+        <file>assets/icons/exit.png</file>
+        <file>assets/icons/start.png</file>
+        <file>sounds/rock-explosision-1.wav</file>
+        <file>assets/spacecraft.png</file>
+        <file>assets/fighterjet.png</file>
     </qresource>
     <qresource prefix="/sounds">
         <file>sounds/background.mp3</file>
@@ -19,5 +25,7 @@
         <file>sounds/gunshot1.mp3</file>
         <file>sounds/gunshot2.mp3</file>
         <file>sounds/background2.mp3</file>
+        <file>sounds/357-magnum.mp3</file>
+        <file>sounds/rock-explosion-2.mp3</file>
     </qresource>
 </RCC>

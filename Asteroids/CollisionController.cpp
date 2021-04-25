@@ -1,11 +1,19 @@
 #include "CollisionController.h"
-#include "Score.h"
-#include <QDebug>
+
+
+// initilise sounds
+const QString Meta::explosion1 = "qrc:/assets/sounds/rock-explosision-1.wav";
+const QString Meta::explosion2 = "qrc:/sounds/sounds/rock-explosion-2.mp3";
 
 // constructor of the collision controller
 CollisionController::CollisionController(){
     // set the collision sound
-    media.setMedia(QUrl("qrc:/sounds/sounds/explosion.mp3"));
+    // media.setMedia(QUrl("qrc:/assets/sounds/rock-explosision-1.wav"));
+    // random explosion sound selection
+    int randomNumber = QRandomGenerator::global()->bounded(1, 100);
+    QString explosion = "";
+    explosion = (randomNumber % 2 == 0) ? Meta::explosion1 : Meta::explosion2;
+    media.setMedia(QUrl(explosion));
     timer = new QTimer();
     this->connect(timer, SIGNAL(timeout()), this, SLOT(collide()));
     timer->start(1); // shoot every 1 ms
@@ -32,13 +40,15 @@ void CollisionController::collide(){
             int xb = (*iterB)->getX(); int yb = (*iterB)->getY();
             int wb = (*iterB)->getWidth(); int hb = (*iterB)->getHeight();
 
-            // collision detection
+            // collision detection between asteroids and bullets
             if((*iterA)->getCollided()== false && (*iterB)->getCollided()== false && xa + wa > xb && xb + wb > xa && ya + ha > yb && yb + hb > ya + ha){
                 // disable collisions for the colliding elements
                 (*iterA)->setCollided(true);
                 (*iterB)->setCollided(true);
                 // play collision sound
-                if(media.state() == QMediaPlayer::PlayingState){
+
+
+               if(media.state() == QMediaPlayer::PlayingState){
                     // reset the sound
                     media.setPosition(0);
                 }else if(media.state() == QMediaPlayer::StoppedState){
@@ -48,15 +58,22 @@ void CollisionController::collide(){
 
                 // get the concerned asteroid renderer
                 AsteroidRenderer* asteroidRenderer = AsteroidFactory::getAsteroidRenderer(*iterA);
-                 // remove that asteroid from the scene
-                if(asteroidRenderer != 0) Scene::getScene()->removeItem(asteroidRenderer);
+                 // remove that asteroid from the scene and from memory
+                if(asteroidRenderer != 0) {
+                    Scene::getScene()->removeItem(asteroidRenderer);
+                    AsteroidFactory::getAsteroidRenderers().remove(asteroidRenderer);
+                    delete asteroidRenderer;
+                }
                 // scatter the residues of the destroyed asteroid
                 AsteroidFactory::scatter(*iterA);
                 // get the concerned bullet
                 BulletRenderer* bulletRenderer = PlayerRenderer::getBulletRenderer(*iterB);
-                // remove the bullet fromt he scene
-                if(bulletRenderer != 0) Scene::getScene()->removeItem(bulletRenderer);
-
+                // remove the bullet from the scene and from memory
+                if(bulletRenderer != 0) {
+                    Scene::getScene()->removeItem(bulletRenderer);
+                    PlayerRenderer::getBulletRenderers().remove(bulletRenderer);
+                    delete bulletRenderer;
+                }
                 // update the score on the screen
                 Score::updateScore();
                  break;

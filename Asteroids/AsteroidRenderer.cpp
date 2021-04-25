@@ -38,6 +38,8 @@ void AsteroidRenderer::update(){
             this->setPos(coordX, coordY);
     }
     else{
+        // update the y position
+        coordY = asteroid->getY();
         // update player's life if the asteroid didnt get collided
         if(asteroid->getCollided() == false){
              Life::updateLife();

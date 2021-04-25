@@ -15,11 +15,16 @@ public:
     // destructor
     ~BulletRenderer();
     int getId(){return id;}
+    int& getY(){return coordY;}
+    int& getHeight() {return height;}
 public slots:
     void update();
 private:
     QTimer* timer;
     Bullet* bullet;
+    // y coordinate to detect position of bullet
+    int coordY;
+    int height;
     // unique id for retrieval
     int id;
 };
