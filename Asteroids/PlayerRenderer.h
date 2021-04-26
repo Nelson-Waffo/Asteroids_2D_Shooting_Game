@@ -9,7 +9,6 @@
 #include "Timer.h"
 #include <list>
 #include <QTimer>
-#include <QDebug>
 
 // a class responsible for rendering the player on the screen
 class PlayerRenderer :public QObject, public QGraphicsPixmapItem{
@@ -31,6 +30,7 @@ signals:
     void restart();
 private:
     static std::list<BulletRenderer*> bulletRenderers;
+    // an instance of the player
     Player* player;
     // a variable to define the sliding speed of the player
     static int slide;

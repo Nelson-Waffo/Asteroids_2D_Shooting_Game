@@ -1,4 +1,6 @@
 #include "Player.h"
+
+// initialise variables
 Player* Player::player = nullptr;
 int Player::width = 100;
 int Player::height = 95;
@@ -29,7 +31,7 @@ Player::Player(int x, int y, int w, int h, QString p) : Actor(x, y){
 }
 
 // a function used to reset the position X of the player
-int& Player::resetX(){
+void Player::resetX(){
     // place the player in the middle
     Scene* scene = Scene::getScene();
     xCoord = scene->getWidth()/2 - width/2;
@@ -42,7 +44,6 @@ Player::~Player(){
         ++it){
         delete *it;
     }
-    // player = nullptr;
 }
 
 // a method which enables the player to shoot
@@ -92,3 +93,4 @@ void Player::setBulletSound()
         media.setMedia(QUrl("qrc:/sounds/sounds/gunshot1.mp3"));
     }
 }
+

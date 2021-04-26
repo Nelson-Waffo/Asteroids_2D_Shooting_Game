@@ -26,7 +26,7 @@ public:
     // data interface
     static Player* getPlayer();
     static QString getPath(){return path;}
-    int& resetX();
+    void resetX();
     int getWidth(){return width;}
     Bullet* shoot();
     // a collection of shot bullets
@@ -35,7 +35,6 @@ public:
     void setPlayerImage();
     // a function which determines the bullet sound at run time
     void setBulletSound();
-
 };
 
 #endif // PLAYER_H

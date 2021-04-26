@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include <QApplication>
-// #include "Game.h"
 #include "mainwidget.h"
 #include "asteroidsgame.h"
 

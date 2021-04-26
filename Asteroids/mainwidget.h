@@ -3,7 +3,7 @@
 
 #include <QDebug>
 #include <QWidget>
-#include "PlayerController.h"
+// #include "PlayerController.h"
 #include "PlayerRenderer.h"
 #include "Player.h"
 #include <QTimer>
@@ -18,10 +18,12 @@
 #include "Life.h"
 #include <QRandomGenerator>
 
+// namespace for the form class
 namespace Ui {
 class MainWidget;
 }
 
+// a class responsible for starting or restarting the game
 class MainWidget : public QWidget
 {
     Q_OBJECT
@@ -41,7 +43,7 @@ private slots:
     void replay();
 private:
     Ui::MainWidget *ui;
-    // media and rendering variables
+    // media and rendering pointer variables
     QMediaPlayer mediaPlayer;
     QTimer* timer;
     PlayerRenderer* playerRenderer;

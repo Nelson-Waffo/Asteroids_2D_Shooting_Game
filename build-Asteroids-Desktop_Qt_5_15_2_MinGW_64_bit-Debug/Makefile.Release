@@ -875,10 +875,10 @@ release/moc_CollisionController.cpp: ../Asteroids/CollisionController.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
 		../Asteroids/BulletRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QDebug \
 		../Asteroids/AsteroidFactory.h \
 		../Asteroids/AsteroidRenderer.h \
 		../Asteroids/Asteroid.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QDebug \
 		release/moc_predefs.h \
 		../../../../QtCreator/5.15.2/mingw81_64/bin/moc.exe
 	'C:\QtCreator\5.15.2\mingw81_64\bin\moc.exe' $(DEFINES) --include C:/PF/C++/Asteroids/build-Asteroids-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/QtCreator/5.15.2/mingw81_64/mkspecs/win32-g++ -IC:/PF/C++/Asteroids/Asteroids -IC:/QtCreator/5.15.2/mingw81_64/include -IC:/QtCreator/5.15.2/mingw81_64/include/QtMultimedia -IC:/QtCreator/5.15.2/mingw81_64/include/QtWidgets -IC:/QtCreator/5.15.2/mingw81_64/include/QtGui -IC:/QtCreator/5.15.2/mingw81_64/include/QtANGLE -IC:/QtCreator/5.15.2/mingw81_64/include/QtNetwork -IC:/QtCreator/5.15.2/mingw81_64/include/QtCore -I. -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/QtCreator/Tools/mingw810_64/x86_64-w64-mingw32/include ../Asteroids/CollisionController.h -o release/moc_CollisionController.cpp
@@ -1118,7 +1118,6 @@ release/moc_PlayerRenderer.cpp: ../Asteroids/PlayerRenderer.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
 		../Asteroids/BulletRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QDebug \
 		release/moc_predefs.h \
 		../../../../QtCreator/5.15.2/mingw81_64/bin/moc.exe
 	'C:\QtCreator\5.15.2\mingw81_64\bin\moc.exe' $(DEFINES) --include C:/PF/C++/Asteroids/build-Asteroids-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/QtCreator/5.15.2/mingw81_64/mkspecs/win32-g++ -IC:/PF/C++/Asteroids/Asteroids -IC:/QtCreator/5.15.2/mingw81_64/include -IC:/QtCreator/5.15.2/mingw81_64/include/QtMultimedia -IC:/QtCreator/5.15.2/mingw81_64/include/QtWidgets -IC:/QtCreator/5.15.2/mingw81_64/include/QtGui -IC:/QtCreator/5.15.2/mingw81_64/include/QtANGLE -IC:/QtCreator/5.15.2/mingw81_64/include/QtNetwork -IC:/QtCreator/5.15.2/mingw81_64/include/QtCore -I. -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/QtCreator/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/QtCreator/Tools/mingw810_64/x86_64-w64-mingw32/include ../Asteroids/PlayerRenderer.h -o release/moc_PlayerRenderer.cpp
@@ -2538,10 +2537,10 @@ release/CollisionController.o: ../Asteroids/CollisionController.cpp ../Asteroids
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
 		../Asteroids/BulletRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QDebug \
 		../Asteroids/AsteroidFactory.h \
 		../Asteroids/AsteroidRenderer.h \
-		../Asteroids/Asteroid.h
+		../Asteroids/Asteroid.h \
+		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/CollisionController.o ../Asteroids/CollisionController.cpp
 
 release/Life.o: ../Asteroids/Life.cpp ../Asteroids/Life.h \
@@ -2910,7 +2909,6 @@ release/PlayerRenderer.o: ../Asteroids/PlayerRenderer.cpp ../Asteroids/PlayerRen
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		../../../../QtCreator/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
 		../Asteroids/BulletRenderer.h \
-		../../../../QtCreator/5.15.2/mingw81_64/include/QtCore/QDebug \
 		../Asteroids/Life.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/PlayerRenderer.o ../Asteroids/PlayerRenderer.cpp
 

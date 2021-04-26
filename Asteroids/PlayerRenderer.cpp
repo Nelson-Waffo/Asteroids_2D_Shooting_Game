@@ -26,7 +26,7 @@ PlayerRenderer::PlayerRenderer(Player* p, QGraphicsItem* parent):
     // create a connection to clear bullets out of the screen
     timer = new QTimer(this);
     this->connect(timer, &QTimer::timeout, this, &PlayerRenderer::deleteBulletsInPlay);
-    timer->start(1000); // clean up every 1 second
+    timer->start(1000); // clean up every 1 second   
 }
 
 // destructor
@@ -43,8 +43,6 @@ PlayerRenderer::~PlayerRenderer(){
     bulletRenderers.clear();
 }
 
-
-
 // a method used to control player movements
 void PlayerRenderer::keyPressEvent(QKeyEvent * event){
     // key pressed
@@ -52,8 +50,8 @@ void PlayerRenderer::keyPressEvent(QKeyEvent * event){
 
     if(Life::getLife() > 0 && Timer::getTime() > 0 && (key == Qt::Key_A || key == Qt::Key_Left)){
        if(player->getX() >= slide - player->getWidth()/3){
-           player->setX(player->getX() - slide);
-           this->setPos(player->getX(), player->getY());
+          player->setX(player->getX() - slide);
+          this->setPos(player->getX(), player->getY());
        }
     }
 

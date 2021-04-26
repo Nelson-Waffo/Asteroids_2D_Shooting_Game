@@ -108,6 +108,8 @@ void MainWidget::restartGame()
     startGame();
 }
 
+// a function to release resources to enable a clean restart
+// of the game
 void MainWidget::cleanup()
 {
     // clean the scene
